@@ -1,0 +1,36 @@
+2019-08-08 15:58:08,447 [29] DEBUG log4net [(null)] - DEBUG----------------------------
+2019-08-08 15:58:08,458 [29] DEBUG log4net [(null)] - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 SourceCode.Workflow.Client.User.LoadProperties()
+   在 SourceCode.Workflow.Client.User.get_Name()
+   在 SourceCode.Workflow.Client.Connection.ImpersonateUser(String UserName)
+   在 K2Application.Common.K2WorkflowHelper.GetCurrentUserWorkListItem(String ApproverUser) 位置 d:\project\DingTalk\K2Application\Common\K2WorkflowHelper.cs:行号 358
+2019-08-08 16:05:06,752 [50] DEBUG log4net [(null)] - DEBUG----------------------------
+2019-08-08 16:05:06,762 [50] DEBUG log4net [(null)] - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 SourceCode.Workflow.Client.User.LoadProperties()
+   在 SourceCode.Workflow.Client.User.get_Name()
+   在 SourceCode.Workflow.Client.Connection.ImpersonateUser(String UserName)
+   在 K2Application.Common.K2WorkflowHelper.GetCurrentUserWorkListItem(String ApproverUser) 位置 d:\project\DingTalk\K2Application\Common\K2WorkflowHelper.cs:行号 358
+2019-08-08 17:07:17,469 [11] DEBUG log4net [(null)] - DEBUG----------------------------
+2019-08-08 17:07:17,481 [11] DEBUG log4net [(null)] - System.ArgumentOutOfRangeException: 索引和长度必须引用该字符串内的位置。
+参数名: length
+   在 System.String.InternalSubStringWithChecks(Int32 startIndex, Int32 length, Boolean fAlwaysCopy)
+   在 System.String.Substring(Int32 startIndex, Int32 length)
+   在 K2Application.Common.K2WorkflowHelper.GetCurrentUserWorkListItem(String ApproverUser) 位置 d:\project\DingTalk\K2Application\Common\K2WorkflowHelper.cs:行号 389
+2019-08-08 17:11:20,547 [11] DEBUG log4net [(null)] - DEBUG----------------------------
+2019-08-08 17:11:20,547 [11] DEBUG log4net [(null)] - System.ArgumentOutOfRangeException: 索引和长度必须引用该字符串内的位置。
+参数名: length
+   在 System.String.InternalSubStringWithChecks(Int32 startIndex, Int32 length, Boolean fAlwaysCopy)
+   在 System.String.Substring(Int32 startIndex, Int32 length)
+   在 K2Application.Common.K2WorkflowHelper.GetCurrentUserWorkListItem(String ApproverUser) 位置 d:\project\DingTalk\K2Application\Common\K2WorkflowHelper.cs:行号 389
+2019-08-08 17:11:54,531 [18] DEBUG log4net [(null)] - DEBUG----------------------------
+2019-08-08 17:11:54,542 [18] DEBUG log4net [(null)] - System.ArgumentOutOfRangeException: 索引和长度必须引用该字符串内的位置。
+参数名: length
+   在 System.String.InternalSubStringWithChecks(Int32 startIndex, Int32 length, Boolean fAlwaysCopy)
+   在 System.String.Substring(Int32 startIndex, Int32 length)
+   在 K2Application.Common.K2WorkflowHelper.GetCurrentUserWorkListItem(String ApproverUser) 位置 d:\project\DingTalk\K2Application\Common\K2WorkflowHelper.cs:行号 389
+2019-08-08 17:12:11,162 [23] DEBUG log4net [(null)] - DEBUG----------------------------
+2019-08-08 17:12:11,173 [23] DEBUG log4net [(null)] - System.ArgumentOutOfRangeException: 索引和长度必须引用该字符串内的位置。
+参数名: length
+   在 System.String.InternalSubStringWithChecks(Int32 startIndex, Int32 length, Boolean fAlwaysCopy)
+   在 System.String.Substring(Int32 startIndex, Int32 length)
+   在 K2Application.Common.K2WorkflowHelper.GetCurrentUserWorkListItem(String ApproverUser) 位置 d:\project\DingTalk\K2Application\Common\K2WorkflowHelper.cs:行号 389

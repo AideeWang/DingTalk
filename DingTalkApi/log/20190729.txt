@@ -1,0 +1,42 @@
+2019-07-29 15:40:16,229 [67] DEBUG log4net [(null)] - DEBUG----------------------------
+2019-07-29 15:40:16,241 [67] DEBUG log4net [(null)] - “Infrastructure.ServiceLoader”的类型初始值设定项引发异常。
+2019-07-29 15:41:17,838 [75] DEBUG log4net [(null)] - DEBUG----------------------------
+2019-07-29 15:41:17,839 [75] DEBUG log4net [(null)] - “Infrastructure.ServiceLoader”的类型初始值设定项引发异常。
+2019-07-29 15:53:48,409 [90] DEBUG log4net [(null)] - DEBUG----------------------------
+2019-07-29 15:53:48,420 [90] DEBUG log4net [(null)] - Resolution of the dependency failed, type = "Application.Service.ILoginService", name = "(none)".
+Exception occurred while: Calling constructor Application.Service.LoginService().
+Exception is: ArgumentException - The type Domain.Repository.CCHR_DepartmentRepository is not interceptable.
+参数名: typeToIntercept
+-----------------------------------------------
+At the time of the exception, the container was:
+
+  Resolving Application.Service.LoginService,(none) (mapped from Application.Service.ILoginService, (none))
+  Calling constructor Application.Service.LoginService()
+
+2019-07-29 15:59:23,929 [83] DEBUG log4net [(null)] - DEBUG----------------------------
+2019-07-29 15:59:23,929 [83] DEBUG log4net [(null)] - Resolution of the dependency failed, type = "Application.Service.ILoginService", name = "(none)".
+Exception occurred while: Calling constructor Application.Service.LoginService().
+Exception is: ArgumentException - The type Domain.Repository.CCHR_DepartmentRepository is not interceptable.
+参数名: typeToIntercept
+-----------------------------------------------
+At the time of the exception, the container was:
+
+  Resolving Application.Service.LoginService,(none) (mapped from Application.Service.ILoginService, (none))
+  Calling constructor Application.Service.LoginService()
+
+2019-07-29 16:09:23,205 [118] DEBUG log4net [(null)] - DEBUG----------------------------
+2019-07-29 16:09:23,217 [118] DEBUG log4net [(null)] - The 'FlagDeleted' property on 'CCHR_Employee' could not be set to a 'System.Int16' value. You must set this property to a non-null value of type 'System.Int32'. 
+2019-07-29 16:20:17,287 [115] DEBUG log4net [(null)] - DEBUG----------------------------
+2019-07-29 16:20:17,299 [115] DEBUG log4net [(null)] - The entity type CCHR_Department is not part of the model for the current context.
+2019-07-29 16:23:36,464 [111] DEBUG log4net [(null)] - DEBUG----------------------------
+2019-07-29 16:23:36,476 [111] DEBUG log4net [(null)] - One or more validation errors were detected during model generation:
+
+Domain.CCHR_Department: : EntityType 'CCHR_Department' has no key defined. Define the key for this EntityType.
+CCHR_Department: EntityType: EntitySet 'CCHR_Department' is based on type 'CCHR_Department' that has no keys defined.
+
+2019-07-29 16:24:57,813 [111] DEBUG log4net [(null)] - DEBUG----------------------------
+2019-07-29 16:24:57,824 [111] DEBUG log4net [(null)] - 序列不包含任何元素
+2019-07-29 16:26:06,329 [106] DEBUG log4net [(null)] - DEBUG----------------------------
+2019-07-29 16:26:06,330 [106] DEBUG log4net [(null)] - 序列不包含任何元素
+2019-07-29 16:28:36,816 [111] DEBUG log4net [(null)] - DEBUG----------------------------
+2019-07-29 16:28:36,827 [111] DEBUG log4net [(null)] - The 'DateClosed' property on 'CCHR_Department' could not be set to a 'null' value. You must set this property to a non-null value of type 'System.DateTime'. 

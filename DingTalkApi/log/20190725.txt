@@ -1,0 +1,4 @@
+2019-07-25 14:43:22,129 [8] DEBUG log4net [(null)] - BusinessDebug----------------------------
+2019-07-25 14:43:22,140 [8] DEBUG log4net [(null)] - 请参考FAQ：https://open-doc.dingtalk.com/microapp/faquestions/cvbtph。错误原因：访问ip不在白名单之中,request ip=180.168.57.238 appKey(dingti81vblge3xccsbh)
+2019-07-25 14:43:22,141 [8] DEBUG log4net [(null)] - DEBUG----------------------------
+2019-07-25 14:43:22,142 [8] DEBUG log4net [(null)] - 请参考FAQ：https://open-doc.dingtalk.com/microapp/faquestions/cvbtph。错误原因：访问ip不在白名单之中,request ip=180.168.57.238 appKey(dingti81vblge3xccsbh)

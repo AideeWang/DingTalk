@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="K2WebService.Service.K2WorkflowService" CodeBehind="K2WorkflowService.svc.cs" %>

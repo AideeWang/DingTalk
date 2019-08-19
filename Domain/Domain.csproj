@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D5A11CBA-3AAD-47BA-A813-D1B28919BA9F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Domain</RootNamespace>
+    <AssemblyName>Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.Extended">
+      <HintPath>..\packages\EntityFramework.Extended.6.1.0.168\lib\net45\EntityFramework.Extended.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CCHR\CCHRDBContext.cs" />
+    <Compile Include="CCHR\DTO\BaseResponse.cs" />
+    <Compile Include="CCHR\DTO\EmpContractApply\EmpContractApplyRequest.cs" />
+    <Compile Include="CCHR\DTO\EmpContractApply\EmpContractApplyResponse.cs" />
+    <Compile Include="K2\ApprovalRequest.cs" />
+    <Compile Include="CCHR\Entity\EmployeeContractApply.cs" />
+    <Compile Include="CCHR\Repository\EmployeeContractApply\IEmployeeContractApplyRepository.cs" />
+    <Compile Include="CCHR\Mapping\EmployeeContractApplyMapping.cs" />
+    <Compile Include="CCHR\Repository\EmployeeContractApply\EmployeeContractApplyRepository.cs" />
+    <Compile Include="DingTalkSync\DTO\BaseResponse.cs" />
+    <Compile Include="DingTalkSync\DTO\CCHR_Employee\EmployeeInfoResponse.cs" />
+    <Compile Include="DingTalkSync\Entity\CCHR_Department.cs" />
+    <Compile Include="DingTalkSync\Entity\NameValuePairs.cs" />
+    <Compile Include="DingTalkSync\Mapping\CCHR_DepartmentMap.cs" />
+    <Compile Include="DingTalkSync\Mapping\CCHR_EmployeeMap.cs" />
+    <Compile Include="DingTalkSync\Mapping\CCHR_EmployeePositionRoleMap.cs" />
+    <Compile Include="DingTalkSync\Mapping\CCHR_PositionMap.cs" />
+    <Compile Include="DingTalkSync\Mapping\DepartmentSyncMap.cs" />
+    <Compile Include="DingTalkSync\Mapping\NameValuePairsMap.cs" />
+    <Compile Include="DingTalkSync\Mapping\UserSyncMap.cs" />
+    <Compile Include="DingTalkSync\DTO\AccessTokenResponse.cs" />
+    <Compile Include="DingTalkSync\DTO\BaseDingTalkResponse.cs" />
+    <Compile Include="DingTalkSync\DTO\DingUserIdResponse.cs" />
+    <Compile Include="DingTalkSync\DTO\JsapiTicketResponse.cs" />
+    <Compile Include="DingTalkSync\Entity\CCHR_Employee.cs" />
+    <Compile Include="DingTalkSync\Entity\CCHR_EmployeePositionRole.cs" />
+    <Compile Include="DingTalkSync\Entity\CCHR_Position.cs" />
+    <Compile Include="DingTalkSync\Entity\DepartmentSync.cs" />
+    <Compile Include="DingTalkSync\Entity\UserSync.cs" />
+    <Compile Include="DingTalkSync\Entity\Entity.cs" />
+    <Compile Include="DingTalkSync\DingTalkSyncDBContext.cs" />
+    <Compile Include="K2\ApplyUserInfo.cs" />
+    <Compile Include="K2\ApprovalUserInfo.cs" />
+    <Compile Include="K2\ComAuditResult.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DingTalkSync\Repository\CCHR_Department\CCHR_DepartmentRepository.cs" />
+    <Compile Include="DingTalkSync\Repository\CCHR_Department\ICCHR_DepartmentRepository.cs" />
+    <Compile Include="DingTalkSync\Repository\CCHR_EmployeePositionRole\CCHR_EmployeePositionRoleRepository.cs" />
+    <Compile Include="DingTalkSync\Repository\CCHR_EmployeePositionRole\ICCHR_EmployeePositionRoleRepository.cs" />
+    <Compile Include="DingTalkSync\Repository\CCHR_Position\CCHR_PositionRepository.cs" />
+    <Compile Include="DingTalkSync\Repository\CCHR_Position\ICCHR_PositionRepository.cs" />
+    <Compile Include="UnitOfWork\IQueryableUnitOfWork.cs" />
+    <Compile Include="UnitOfWork\IRepository.cs" />
+    <Compile Include="UnitOfWork\ISql.cs" />
+    <Compile Include="UnitOfWork\IUnitOfWork.cs" />
+    <Compile Include="DingTalkSync\Repository\CCHR_Employee\ICCHR_EmployeeRepository.cs" />
+    <Compile Include="DingTalkSync\Repository\CCHR_Employee\CCHR_EmployeeRepository.cs" />
+    <Compile Include="DingTalkSync\Repository\NameValuePairs\INameValuePairsRepository.cs" />
+    <Compile Include="DingTalkSync\Repository\NameValuePairs\NameValuePairsRepository.cs" />
+    <Compile Include="UnitOfWork\Repository.cs" />
+    <Compile Include="DingTalkSync\Repository\UserSync\IUserSyncRepository.cs" />
+    <Compile Include="DingTalkSync\Repository\UserSync\UserSyncRepository.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj">
+      <Project>{35ca6700-1901-4d05-b63f-b63b56b5c1f9}</Project>
+      <Name>Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

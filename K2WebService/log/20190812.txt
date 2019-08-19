@@ -1,0 +1,67 @@
+2019-08-12 09:36:54,449 [83] DEBUG log4net [(null)] - DEBUG----------------------------
+2019-08-12 09:36:54,452 [83] DEBUG log4net [(null)] - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 K2Application.Common.K2WorkflowHelper.ApprovalProcessInstance(String SN, Dictionary`2 DicDataFields, String ApprovalUserInfoString) 位置 d:\project\DingTalk\K2Application\Common\K2WorkflowHelper.cs:行号 178
+2019-08-12 15:07:39,536 [19] DEBUG log4net [(null)] - DEBUG----------------------------
+2019-08-12 15:07:39,548 [19] DEBUG log4net [(null)] - System.Exception: 没有找到XML节点[Root/Approvals],请检查数据格式定义是否正确!
+   在 K2Application.Common.XMLApproval.AddApproval(String Name, String DomainAccount, String ApprovalResult, String ApprovalComment, String ActivityName) 位置 d:\project\DingTalk\K2Application\Common\XMLApproval.cs:行号 86
+   在 K2Application.Common.K2WorkflowHelper.StartProcessInstance(String WorkflowTypeName, Dictionary`2 dicDataFields, String ApplyUserInfoString, Boolean Sync) 位置 d:\project\DingTalk\K2Application\Common\K2WorkflowHelper.cs:行号 146
+2019-08-12 15:11:27,286 [19] DEBUG log4net [(null)] - DEBUG----------------------------
+2019-08-12 15:11:27,286 [19] DEBUG log4net [(null)] - System.Exception: 没有找到XML节点[Root/Approvals],请检查数据格式定义是否正确!
+   在 K2Application.Common.XMLApproval.AddApproval(String Name, String DomainAccount, String ApprovalResult, String ApprovalComment, String ActivityName) 位置 d:\project\DingTalk\K2Application\Common\XMLApproval.cs:行号 86
+   在 K2Application.Common.K2WorkflowHelper.StartProcessInstance(String WorkflowTypeName, Dictionary`2 dicDataFields, String ApplyUserInfoString, Boolean Sync) 位置 d:\project\DingTalk\K2Application\Common\K2WorkflowHelper.cs:行号 146
+2019-08-12 15:14:24,429 [40] DEBUG log4net [(null)] - DEBUG----------------------------
+2019-08-12 15:14:24,440 [40] DEBUG log4net [(null)] - ClientException: 24411 K2:CENTALINE\workflow.sz from 10.104.9.58:1885421 is not allowed to open the worklist item with SN=5598909_48
+   在 SourceCode.Workflow.Client.InternalConnection.Call(ArchiveX ar, MessageType msgtype)
+   在 SourceCode.Workflow.Client.InternalConnection.CallFunction(ArchiveX ar)
+   在 SourceCode.Workflow.Client.Connection.OpenWorklistItem(String SerialNumber, String Platform, Boolean Alloc, Boolean IgnoreStatus, String ManagedUser)
+   在 SourceCode.Workflow.Client.Connection.OpenWorklistItem(String SerialNumber)
+   在 K2Application.Common.K2WorkflowHelper.GetProcessInstanceApprovalHistory(String SN) 位置 d:\project\DingTalk\K2Application\Common\K2WorkflowHelper.cs:行号 375
+2019-08-12 15:14:54,605 [40] DEBUG log4net [(null)] - DEBUG----------------------------
+2019-08-12 15:14:54,605 [40] DEBUG log4net [(null)] - ClientException: 24411 K2:CENTALINE\workflow.sz from 10.104.9.58:1885423 is not allowed to open the worklist item with SN=5598909_48
+   在 SourceCode.Workflow.Client.InternalConnection.Call(ArchiveX ar, MessageType msgtype)
+   在 SourceCode.Workflow.Client.InternalConnection.CallFunction(ArchiveX ar)
+   在 SourceCode.Workflow.Client.Connection.OpenWorklistItem(String SerialNumber, String Platform, Boolean Alloc, Boolean IgnoreStatus, String ManagedUser)
+   在 SourceCode.Workflow.Client.Connection.OpenWorklistItem(String SerialNumber)
+   在 K2Application.Common.K2WorkflowHelper.GetProcessInstanceApprovalHistory(String SN) 位置 d:\project\DingTalk\K2Application\Common\K2WorkflowHelper.cs:行号 375
+2019-08-12 15:19:13,440 [11] DEBUG log4net [(null)] - DEBUG----------------------------
+2019-08-12 15:19:13,453 [11] DEBUG log4net [(null)] - ClientException: 24411 K2:CENTALINE\workflow.sz from 10.104.9.58:1885434 is not allowed to open the worklist item with SN=5598909_48
+   在 SourceCode.Workflow.Client.InternalConnection.Call(ArchiveX ar, MessageType msgtype)
+   在 SourceCode.Workflow.Client.InternalConnection.CallFunction(ArchiveX ar)
+   在 SourceCode.Workflow.Client.Connection.OpenWorklistItem(String SerialNumber, String Platform, Boolean Alloc, Boolean IgnoreStatus, String ManagedUser)
+   在 SourceCode.Workflow.Client.Connection.OpenWorklistItem(String SerialNumber)
+   在 K2Application.Common.K2WorkflowHelper.GetProcessInstanceApprovalHistory(String SN, String ApprovalUserId) 位置 d:\project\DingTalk\K2Application\Common\K2WorkflowHelper.cs:行号 375
+2019-08-12 15:20:12,413 [11] DEBUG log4net [(null)] - DEBUG----------------------------
+2019-08-12 15:20:12,414 [11] DEBUG log4net [(null)] - ClientException: 24411 K2:CENTALINE\workflow.sz from 10.104.9.58:1885438 is not allowed to open the worklist item with SN=5598909_48
+   在 SourceCode.Workflow.Client.InternalConnection.Call(ArchiveX ar, MessageType msgtype)
+   在 SourceCode.Workflow.Client.InternalConnection.CallFunction(ArchiveX ar)
+   在 SourceCode.Workflow.Client.Connection.OpenWorklistItem(String SerialNumber, String Platform, Boolean Alloc, Boolean IgnoreStatus, String ManagedUser)
+   在 SourceCode.Workflow.Client.Connection.OpenWorklistItem(String SerialNumber)
+   在 K2Application.Common.K2WorkflowHelper.GetProcessInstanceApprovalHistory(String SN, String ApprovalUserId) 位置 d:\project\DingTalk\K2Application\Common\K2WorkflowHelper.cs:行号 375
+2019-08-12 15:20:38,058 [41] DEBUG log4net [(null)] - DEBUG----------------------------
+2019-08-12 15:20:38,059 [41] DEBUG log4net [(null)] - ClientException: 24411 K2:CENTALINE\workflow.sz from 10.104.9.58:1885440 is not allowed to open the worklist item with SN=5598909_48
+   在 SourceCode.Workflow.Client.InternalConnection.Call(ArchiveX ar, MessageType msgtype)
+   在 SourceCode.Workflow.Client.InternalConnection.CallFunction(ArchiveX ar)
+   在 SourceCode.Workflow.Client.Connection.OpenWorklistItem(String SerialNumber, String Platform, Boolean Alloc, Boolean IgnoreStatus, String ManagedUser)
+   在 SourceCode.Workflow.Client.Connection.OpenWorklistItem(String SerialNumber)
+   在 K2Application.Common.K2WorkflowHelper.GetProcessInstanceApprovalHistory(String SN, String ApprovalUserId) 位置 d:\project\DingTalk\K2Application\Common\K2WorkflowHelper.cs:行号 375
+2019-08-12 16:47:37,547 [11] DEBUG log4net [(null)] - DEBUG----------------------------
+2019-08-12 16:47:37,559 [11] DEBUG log4net [(null)] - ClientException: 24411 K2:CENTALINE\doush from 10.104.9.58:1885682 is not allowed to open the worklist item with SN=5598909_48
+   在 SourceCode.Workflow.Client.InternalConnection.Call(ArchiveX ar, MessageType msgtype)
+   在 SourceCode.Workflow.Client.InternalConnection.CallFunction(ArchiveX ar)
+   在 SourceCode.Workflow.Client.Connection.OpenWorklistItem(String SerialNumber, String Platform, Boolean Alloc, Boolean IgnoreStatus, String ManagedUser)
+   在 SourceCode.Workflow.Client.Connection.OpenWorklistItem(String SerialNumber)
+   在 K2Application.Common.K2WorkflowHelper.GetProcessInstanceApprovalHistory(String SN, String ApprovalUserId) 位置 d:\project\DingTalk\K2Application\Common\K2WorkflowHelper.cs:行号 380
+2019-08-12 16:47:52,957 [11] DEBUG log4net [(null)] - DEBUG----------------------------
+2019-08-12 16:47:52,958 [11] DEBUG log4net [(null)] - ClientException: 24411 K2:CENTALINE\doush from 10.104.9.58:1885684 is not allowed to open the worklist item with SN=5598909_63
+   在 SourceCode.Workflow.Client.InternalConnection.Call(ArchiveX ar, MessageType msgtype)
+   在 SourceCode.Workflow.Client.InternalConnection.CallFunction(ArchiveX ar)
+   在 SourceCode.Workflow.Client.Connection.OpenWorklistItem(String SerialNumber, String Platform, Boolean Alloc, Boolean IgnoreStatus, String ManagedUser)
+   在 SourceCode.Workflow.Client.Connection.OpenWorklistItem(String SerialNumber)
+   在 K2Application.Common.K2WorkflowHelper.GetProcessInstanceApprovalHistory(String SN, String ApprovalUserId) 位置 d:\project\DingTalk\K2Application\Common\K2WorkflowHelper.cs:行号 380
+2019-08-12 16:48:09,077 [11] DEBUG log4net [(null)] - DEBUG----------------------------
+2019-08-12 16:48:09,077 [11] DEBUG log4net [(null)] - ClientException: 24411 K2:CENTALINE\bobing from 10.104.9.58:1885685 is not allowed to open the worklist item with SN=5598909_63
+   在 SourceCode.Workflow.Client.InternalConnection.Call(ArchiveX ar, MessageType msgtype)
+   在 SourceCode.Workflow.Client.InternalConnection.CallFunction(ArchiveX ar)
+   在 SourceCode.Workflow.Client.Connection.OpenWorklistItem(String SerialNumber, String Platform, Boolean Alloc, Boolean IgnoreStatus, String ManagedUser)
+   在 SourceCode.Workflow.Client.Connection.OpenWorklistItem(String SerialNumber)
+   在 K2Application.Common.K2WorkflowHelper.GetProcessInstanceApprovalHistory(String SN, String ApprovalUserId) 位置 d:\project\DingTalk\K2Application\Common\K2WorkflowHelper.cs:行号 380

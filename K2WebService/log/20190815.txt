@@ -1,0 +1,26 @@
+2019-08-15 10:01:41,492 [42] DEBUG log4net [(null)] - DEBUG----------------------------
+2019-08-15 10:01:41,504 [42] DEBUG log4net [(null)] - System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Infrastructure.DataTableConvert.<>c__DisplayClass12`1.<ToList>b__d(PropertyInfo p) 位置 d:\project\DingTalk\Infrastructure\DataTableExtensions.cs:行号 84
+   在 System.Collections.Generic.List`1.ForEach(Action`1 action)
+   在 Infrastructure.DataTableConvert.ToList[T](DataTable dt) 位置 d:\project\DingTalk\Infrastructure\DataTableExtensions.cs:行号 84
+   在 K2Application.Common.K2WorkflowHelper.GetCurrentUserCompletedWorkListItem(String ApproverUser) 位置 d:\project\DingTalk\K2Application\Common\K2WorkflowHelper.cs:行号 496
+2019-08-15 10:02:22,069 [42] DEBUG log4net [(null)] - DEBUG----------------------------
+2019-08-15 10:02:22,080 [42] DEBUG log4net [(null)] - System.ArgumentException: 类型“System.Int32”的对象无法转换为类型“System.String”。
+   在 System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   在 System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   在 System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   在 System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   在 System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   在 Infrastructure.DataTableConvert.<>c__DisplayClass12`1.<ToList>b__d(PropertyInfo p) 位置 d:\project\DingTalk\Infrastructure\DataTableExtensions.cs:行号 84
+   在 System.Collections.Generic.List`1.ForEach(Action`1 action)
+   在 Infrastructure.DataTableConvert.ToList[T](DataTable dt) 位置 d:\project\DingTalk\Infrastructure\DataTableExtensions.cs:行号 84
+   在 K2Application.Common.K2WorkflowHelper.GetCurrentUserCompletedWorkListItem(String ApproverUser) 位置 d:\project\DingTalk\K2Application\Common\K2WorkflowHelper.cs:行号 496

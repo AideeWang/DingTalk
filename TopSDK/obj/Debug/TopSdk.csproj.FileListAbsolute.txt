@@ -1,0 +1,9 @@
+D:\project\DingTalkApi\TopSDK\bin\Debug\TopSdk.dll
+D:\project\DingTalkApi\TopSDK\bin\Debug\TopSdk.pdb
+D:\project\DingTalkApi\TopSDK\obj\Debug\TopSdk.dll
+D:\project\DingTalkApi\TopSDK\obj\Debug\TopSdk.pdb
+D:\project\DingTalk\TopSDK\bin\Debug\TopSdk.dll
+D:\project\DingTalk\TopSDK\bin\Debug\TopSdk.pdb
+D:\project\DingTalk\TopSDK\obj\Debug\TopSdk.dll
+D:\project\DingTalk\TopSDK\obj\Debug\TopSdk.pdb
+D:\project\DingTalk\TopSDK\obj\Debug\TopSdk.csprojResolveAssemblyReference.cache

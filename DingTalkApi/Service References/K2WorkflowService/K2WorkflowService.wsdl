@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="K2WorkflowService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xs:import namespace="http://schemas.datacontract.org/2004/07/K2Application.Common" />
+      <xs:element name="StartProcessInstance">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="WorkflowTypeName" nillable="true" type="xs:string" />
+            <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="dicDataFields" nillable="true" type="q1:ArrayOfKeyValueOfstringanyType" />
+            <xs:element minOccurs="0" name="ApplyUserInfo" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="StartProcessInstanceResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetCurrentUserWorkListItem">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="ApprovalUser" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetCurrentUserWorkListItemResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/K2Application.Common" minOccurs="0" name="GetCurrentUserWorkListItemResult" nillable="true" type="q2:ArrayOfApprovalWorklistItem" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ApprovalProcessInstance">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="SN" nillable="true" type="xs:string" />
+            <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="dicDataFields" nillable="true" type="q3:ArrayOfKeyValueOfstringanyType" />
+            <xs:element minOccurs="0" name="ApprovalUserInfo" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ApprovalProcessInstanceResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetProcessInstanceApprovalHistory">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="SN" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="ApprovalUserId" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetProcessInstanceApprovalHistoryResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetProcessInstanceApprovalHistoryResult" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetCurrentUserCompletedWorkListItem">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="ApprovalUser" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetCurrentUserCompletedWorkListItemResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetCurrentUserCompletedWorkListItemResult" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="anyType" nillable="true" type="xs:anyType" />
+      <xs:element name="anyURI" nillable="true" type="xs:anyURI" />
+      <xs:element name="base64Binary" nillable="true" type="xs:base64Binary" />
+      <xs:element name="boolean" nillable="true" type="xs:boolean" />
+      <xs:element name="byte" nillable="true" type="xs:byte" />
+      <xs:element name="dateTime" nillable="true" type="xs:dateTime" />
+      <xs:element name="decimal" nillable="true" type="xs:decimal" />
+      <xs:element name="double" nillable="true" type="xs:double" />
+      <xs:element name="float" nillable="true" type="xs:float" />
+      <xs:element name="int" nillable="true" type="xs:int" />
+      <xs:element name="long" nillable="true" type="xs:long" />
+      <xs:element name="QName" nillable="true" type="xs:QName" />
+      <xs:element name="short" nillable="true" type="xs:short" />
+      <xs:element name="string" nillable="true" type="xs:string" />
+      <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte" />
+      <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt" />
+      <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong" />
+      <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort" />
+      <xs:element name="char" nillable="true" type="tns:char" />
+      <xs:simpleType name="char">
+        <xs:restriction base="xs:int" />
+      </xs:simpleType>
+      <xs:element name="duration" nillable="true" type="tns:duration" />
+      <xs:simpleType name="duration">
+        <xs:restriction base="xs:duration">
+          <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?" />
+          <xs:minInclusive value="-P10675199DT2H48M5.4775808S" />
+          <xs:maxInclusive value="P10675199DT2H48M5.4775807S" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="guid" nillable="true" type="tns:guid" />
+      <xs:simpleType name="guid">
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:attribute name="FactoryType" type="xs:QName" />
+      <xs:attribute name="Id" type="xs:ID" />
+      <xs:attribute name="Ref" type="xs:IDREF" />
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/Arrays" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:complexType name="ArrayOfKeyValueOfstringanyType">
+        <xs:annotation>
+          <xs:appinfo>
+            <IsDictionary xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsDictionary>
+          </xs:appinfo>
+        </xs:annotation>
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="KeyValueOfstringanyType">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Key" nillable="true" type="xs:string" />
+                <xs:element name="Value" nillable="true" type="xs:anyType" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfKeyValueOfstringanyType" nillable="true" type="tns:ArrayOfKeyValueOfstringanyType" />
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/K2Application.Common" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/K2Application.Common" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:complexType name="ArrayOfApprovalWorklistItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="ApprovalWorklistItem" nillable="true" type="tns:ApprovalWorklistItem" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfApprovalWorklistItem" nillable="true" type="tns:ArrayOfApprovalWorklistItem" />
+      <xs:complexType name="ApprovalWorklistItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ApplyUser" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurActivityName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Folio" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProcInstID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProcessName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="URL" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ApprovalWorklistItem" nillable="true" type="tns:ApprovalWorklistItem" />
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="IK2WorkflowService_StartProcessInstance_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartProcessInstance" />
+  </wsdl:message>
+  <wsdl:message name="IK2WorkflowService_StartProcessInstance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartProcessInstanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IK2WorkflowService_GetCurrentUserWorkListItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentUserWorkListItem" />
+  </wsdl:message>
+  <wsdl:message name="IK2WorkflowService_GetCurrentUserWorkListItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentUserWorkListItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IK2WorkflowService_ApprovalProcessInstance_InputMessage">
+    <wsdl:part name="parameters" element="tns:ApprovalProcessInstance" />
+  </wsdl:message>
+  <wsdl:message name="IK2WorkflowService_ApprovalProcessInstance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ApprovalProcessInstanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IK2WorkflowService_GetProcessInstanceApprovalHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProcessInstanceApprovalHistory" />
+  </wsdl:message>
+  <wsdl:message name="IK2WorkflowService_GetProcessInstanceApprovalHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProcessInstanceApprovalHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IK2WorkflowService_GetCurrentUserCompletedWorkListItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentUserCompletedWorkListItem" />
+  </wsdl:message>
+  <wsdl:message name="IK2WorkflowService_GetCurrentUserCompletedWorkListItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentUserCompletedWorkListItemResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IK2WorkflowService">
+    <wsdl:operation name="StartProcessInstance">
+      <wsdl:input wsaw:Action="http://tempuri.org/IK2WorkflowService/StartProcessInstance" message="tns:IK2WorkflowService_StartProcessInstance_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IK2WorkflowService/StartProcessInstanceResponse" message="tns:IK2WorkflowService_StartProcessInstance_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentUserWorkListItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IK2WorkflowService/GetCurrentUserWorkListItem" message="tns:IK2WorkflowService_GetCurrentUserWorkListItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IK2WorkflowService/GetCurrentUserWorkListItemResponse" message="tns:IK2WorkflowService_GetCurrentUserWorkListItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ApprovalProcessInstance">
+      <wsdl:input wsaw:Action="http://tempuri.org/IK2WorkflowService/ApprovalProcessInstance" message="tns:IK2WorkflowService_ApprovalProcessInstance_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IK2WorkflowService/ApprovalProcessInstanceResponse" message="tns:IK2WorkflowService_ApprovalProcessInstance_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProcessInstanceApprovalHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IK2WorkflowService/GetProcessInstanceApprovalHistory" message="tns:IK2WorkflowService_GetProcessInstanceApprovalHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IK2WorkflowService/GetProcessInstanceApprovalHistoryResponse" message="tns:IK2WorkflowService_GetProcessInstanceApprovalHistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentUserCompletedWorkListItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IK2WorkflowService/GetCurrentUserCompletedWorkListItem" message="tns:IK2WorkflowService_GetCurrentUserCompletedWorkListItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IK2WorkflowService/GetCurrentUserCompletedWorkListItemResponse" message="tns:IK2WorkflowService_GetCurrentUserCompletedWorkListItem_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CustomBinding_IK2WorkflowService" type="tns:IK2WorkflowService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="StartProcessInstance">
+      <soap:operation soapAction="http://tempuri.org/IK2WorkflowService/StartProcessInstance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentUserWorkListItem">
+      <soap:operation soapAction="http://tempuri.org/IK2WorkflowService/GetCurrentUserWorkListItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApprovalProcessInstance">
+      <soap:operation soapAction="http://tempuri.org/IK2WorkflowService/ApprovalProcessInstance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProcessInstanceApprovalHistory">
+      <soap:operation soapAction="http://tempuri.org/IK2WorkflowService/GetProcessInstanceApprovalHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentUserCompletedWorkListItem">
+      <soap:operation soapAction="http://tempuri.org/IK2WorkflowService/GetCurrentUserCompletedWorkListItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="K2WorkflowService">
+    <wsdl:port name="CustomBinding_IK2WorkflowService" binding="tns:CustomBinding_IK2WorkflowService">
+      <soap:address location="http://localhost/k2webservice/Service/K2WorkflowService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
