@@ -501,7 +501,56 @@ namespace K2Application.Common
             {
                 throw new K2Exception(ex.ToString());
             }
+        } 
+        #endregion
+
+        #region 设置流程实例
+        /// <summary>
+        /// 设置流程实例最新版本，重试流程错误
+        /// </summary>
+        /// <param name="procInstID"></param>
+        public static void SetProcessInstanceVersionRetry(int procInstID) 
+        {
+            WorkflowManagementServer wms = new WorkflowManagementServer();
+            wms.Open(GetK2ManagementServerConnectionString());
+           
+            SqlHelper sqlHelper = new SqlHelper(K2ConnectionString);
+            var dt=  sqlHelper.ExecuteDataTable(string.Format("EXEC Utility.GetProcInstNewVersionByProcInstID {0}",procInstID));
+            int Ver = Convert.ToInt32(dt.Rows[0]["Ver"]);
+            int ErrorID = Convert.ToInt32(dt.Rows[0]["ErrorID"]);
+            if (ErrorID != 0)
+            {
+                wms.SetProcessInstanceVersion(procInstID, Ver);
+
+                wms.RetryError(procInstID, ErrorID, MngUserID);
+            }
+          
         }
+
+        public static void SetProcessInstanceVersion() 
+        {
+            WorkflowManagementServer wms = new WorkflowManagementServer();
+            wms.Open(GetK2ManagementServerConnectionString());
+           // wms.StopProcessInstances
+
+             SqlHelper sqlHelper = new SqlHelper(K2ConnectionString);
+
+             var dt = sqlHelper.ExecuteDataTable("SELECT ID FROM Server.ProcInst WHERE ProcID IN (1202,1217,1195,1176)");
+             if (dt.Rows.Count > 0)
+             {
+                 foreach (DataRow dr in dt.Rows)
+                 {
+                     wms.StopProcessInstances(Convert.ToInt32(dr["ID"]));
+                     wms.SetProcessInstanceVersion(Convert.ToInt32(dr["ID"]), 68);
+                     wms.StartProcessInstances(Convert.ToInt32(dr["ID"]));
+                 }
+             }
+
+
+        } 
+
+
+
         #endregion
 
     }

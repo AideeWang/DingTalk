@@ -53,4 +53,3 @@ D:\project\DingTalk\Infrastructure\bin\Debug\Microsoft.Practices.Unity.Intercept
 D:\project\DingTalk\Infrastructure\bin\Debug\Newtonsoft.Json.xml
 D:\project\DingTalk\Infrastructure\obj\Debug\Infrastructure.dll
 D:\project\DingTalk\Infrastructure\obj\Debug\Infrastructure.pdb
-D:\project\DingTalk\Infrastructure\obj\Debug\Infrastructure.csprojResolveAssemblyReference.cache
